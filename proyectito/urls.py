@@ -14,16 +14,17 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path
-from aplicacioncita import views
+from django.contrib import admin # Módulo para el panel de administración de Django
+from django.urls import path # Módulo para definir rutas (URLs) en la aplicación
+from aplicacioncita import views # Importa las vistas definidas en la aplicación 'aplicacioncita'
 
+# Ruta para agregar datos (ej: /add/), asociada a la vista 'add' (nombre interno 'add')
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls), 
     path('add/', views.add, name='add'),
-    path('update/', views.update_email, name='update_email'),
-    path('authenticate/', views.authentication, name='authenticate'),
-    path('logout/', views.logout_view, name='logout'),
-    path('', views.form, name='form'),
-    path('usuarios/', views.usuario, name='usuarios'),
+    path('update/', views.update_email, name='update_email'),  # Ruta para actualizar el email (ej: /update/), asociada a la vista 'update_email' (nombre 'update_email')
+    path('authenticate/', views.authentication, name='authenticate'),     # Ruta para autenticar usuarios (ej: /authenticate/), asociada a la vista 'authentication' (nombre 'authenticate')
+    path('logout/', views.logout_view, name='logout'),     # Ruta para cerrar sesión (ej: /logout/), asociada a la vista 'logout_view' (nombre 'logout')
+    path('', views.form, name='form'),     # Ruta principal (página de inicio, ej: /), asociada a la vista 'form' (nombre 'form')
+    path('usuarios/', views.usuario, name='usuarios'),     # Ruta para gestionar o listar usuarios (ej: /usuarios/), asociada a la vista 'usuario' (nombre 'usuarios')
 ]

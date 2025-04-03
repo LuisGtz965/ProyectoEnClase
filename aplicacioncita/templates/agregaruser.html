@@ -1,3 +1,15 @@
+<!-- 
+  Template HTML para gestión de usuarios:
+  1. Estructura básica con Bootstrap 5 para estilos responsive.
+  2. Contiene:
+     - Formulario para agregar usuarios (POST a URL 'usuarios') con campos para nombre, email y edad.
+     - Sección para mostrar lista de usuarios registrados (itera sobre la variable 'usuarios').
+     - Soporte para mensajes de error dinámicos (variable 'error').
+  3. Características:
+     - Validación HTML5 (campos requeridos y tipo number para edad).
+     - Protección CSRF integrada ({% csrf_token %}).
+     - Diseño organizado en contenedores con clases de Bootstrap.
+-->
 <!DOCTYPE html>
 <html lang="es">
 <head>

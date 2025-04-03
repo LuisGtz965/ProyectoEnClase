@@ -1,3 +1,15 @@
+<!-- 
+  Template HTML para autenticación de usuarios:
+  1. Estructura básica con Bootstrap 5 para estilos responsive.
+  2. Contiene un formulario de login con:
+     - Campo de texto para nombre de usuario (username)
+     - Campo de contraseña enmascarado (type="password")
+     - Protección CSRF integrada ({% csrf_token %})
+  3. Características:
+     - Diseño minimalista con clases de Bootstrap (mb-3, form-label, etc.)
+     - Mensaje genérico de seguridad para el usuario (form-text)
+     - Envío mediante método POST para proteger credenciales
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
